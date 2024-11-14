@@ -1,0 +1,24 @@
+-- Create a table named 'Employees'
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Position VARCHAR(50),
+    Salary DECIMAL(10, 2),
+    HireDate DATE
+);
+
+-- Insert some data into the 'Employees' table
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Position, Salary, HireDate) VALUES
+(1, 'John', 'Doe', 'Software Engineer', 75000.00, '2022-01-15'),
+(2, 'Jane', 'Smith', 'Project Manager', 85000.00, '2021-07-01'),
+(3, 'Emily', 'Jones', 'UI/UX Designer', 65000.00, '2023-03-21');
+
+-- Retrieve all data from the 'Employees' table
+SELECT * FROM Employees;
+
+-- Update salary for an employee
+UPDATE Employees SET Salary = 77000.00 WHERE EmployeeID = 1;
+
+-- Delete an employee record
+DELETE FROM Employees WHERE EmployeeID = 3;
